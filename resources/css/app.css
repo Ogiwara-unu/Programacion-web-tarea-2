@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@theme {
+    --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    --color-bg: #f7f4ef;
+    --color-surface: #ffffff;
+    --color-ink: #1a1a18;
+    --color-ink-muted: #6b6b60;
+    --color-accent: #c8502a;
+    --color-border: #e0ddd6;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-ink);
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        min-height: 100vh;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-bottom: 2.5rem;
+        display: inline-block;
+    }
+
+    h1::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: var(--color-accent);
+        margin-top: 0.6rem;
+    }
+
+    label {
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-ink-muted);
+    }
+
+    input[type="text"] {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        padding: 0.75rem 1rem;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        color: var(--color-ink);
+        width: 100%;
+        max-width: 400px;
+        outline: none;
+        transition: border-color 0.2s ease;
+    }
+
+    input[type="text"]:focus {
+        border-color: var(--color-accent);
+    }
+}
+
+@layer components {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 0.25rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: var(--color-ink-muted);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        color: var(--color-accent);
+        border-color: var(--color-accent);
+        background: var(--color-surface);
+    }
+
+    button {
+    background: var(--color-accent);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+}
