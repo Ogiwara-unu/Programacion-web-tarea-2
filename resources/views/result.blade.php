@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Resultado</title>
 
     @vite('resources/css/app.css')
@@ -13,24 +14,26 @@
 <h1>Información del Contacto</h1>
 
 <div class="field">
-<p><strong>Name:</strong> {{ session('name') }}</p>
+<p><strong>Nombre:</strong> {{ session('name') }}</p>
 </div>
 
 <div class="field">
-<p><strong>Phone:</strong> {{ session('phone') }}</p>
+<p><strong>Teléfono:</strong> {{ session('phone') }}</p>
 </div>
 
 <div class="field">
-<p><strong>Address:</strong> {{ session('address') }}</p>
+<p><strong>Dirección:</strong> {{ session('address') }}</p>
 </div>
 
 <div class="field">
-<p><strong>Email:</strong> {{ session('email') }}</p>
+<p><strong>Correo Electrónico:</strong> {{ session('email') }}</p>
 </div>
 
 <div class="field">
-<p><strong>Civil Status:</strong> {{ session('status') }}</p>
+<p><strong>Estado Civil:</strong> {{ session('status') }}</p>
 </div>
+
+<a href="/contact" class="button">Volver</a>
 
 </div>
 

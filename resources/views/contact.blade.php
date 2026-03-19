@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title>Contacto</title>
 
     @vite('resources/css/app.css')
 
@@ -28,28 +28,34 @@
     @csrf
 
     <div class="field">
-        <label>Name</label>
+        <label>Nombre</label>
         <input type="text" name="name" required>
     </div>
 
     <div class="field">
-        <label>Phone</label>
+        <label>Teléfono</label>
         <input type="text" name="phone" required>
     </div>
 
     <div class="field">
-        <label>Address</label>
+        <label>Dirección</label>
         <input type="text" name="address" required>
     </div>
 
     <div class="field">
-        <label>Email</label>
+        <label>Correo Electrónico</label>
         <input type="text" name="email" required>
     </div>
 
     <div class="field">
-        <label>Civil Status</label>
-        <input type="text" name="status" required>
+        <label>Estado Civil</label>
+        <select name="status" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Soltero/a">Soltero/a</option>
+            <option value="Casado/a">Casado/a</option>
+            <option value="Divorciado/a">Divorciado/a</option>
+            <option value="Viudo/a">Viudo/a</option>
+        </select>
     </div>
 
     <button type="submit">Enviar</button>
